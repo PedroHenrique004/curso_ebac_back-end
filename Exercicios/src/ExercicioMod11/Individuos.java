@@ -8,8 +8,19 @@ public class Individuos implements Comparable <Individuos>  {
 
     public String nome;
 
-    public Individuos(String nome){
+    public String sexo;
+
+    public Individuos(String nome, String sexo){
         this.nome = nome;
+        this.sexo = sexo;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     public String getNome() {
@@ -26,7 +37,17 @@ public class Individuos implements Comparable <Individuos>  {
     }
 
     @Override
+    public String toString() {
+        return this.sexo;
+    }
+
+    @Override
     public int compareTo(Individuos individuos) {
         return this.nome.compareTo(individuos.getNome());
+    }
+
+    @Override
+    public int compareTo(Individuos individuos) {
+        return this.sexo.compareTo(individuos.getSexo());
     }
 }

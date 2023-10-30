@@ -4,6 +4,7 @@ package ExercicioMod11;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class ColecoesParte2 {
 
@@ -13,21 +14,30 @@ public class ColecoesParte2 {
     }
 
     public static void lerNome() {
+        Scanner sc = new Scanner(System.in);
 
         List<Individuos> lista = new ArrayList<Individuos>();
 
-        Individuos a = new Individuos("Pedro");
-        Individuos b = new Individuos("Ana");
-        Individuos c = new Individuos("Gabriel");
+        int numIndivuduos = 0;
 
-        lista.add(a);
-        lista.add(b);
-        lista.add(c);
+        System.out.println("Digite o numero de individuos:");
+        int numIndividuos = sc.nextInt();
 
-        System.out.println("Fora da ordem alfabetica:" + lista);
 
-        Collections.sort(lista);
+        
+        for (int i = 0; i <= numIndivuduos; i++) {
+            System.out.print("Digite o nome " + (i + 1) + ": ");
+            String nome = sc.nextLine();
 
-        System.out.println("Em ordem alfabetica:"+ lista);
+            System.out.print("Digite o sexo " + (i + 1) + ": ");
+            String sexo = sc.nextLine();
+
+            Individuos individuo = new Individuos(nome);
+            lista.add(nome);
+
+            Individuos individuo = new Individuos(sexo);
+            lista.add(sexo);
+        }
+
     }
 }
