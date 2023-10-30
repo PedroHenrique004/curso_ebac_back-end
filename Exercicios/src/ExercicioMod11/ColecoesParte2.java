@@ -1,33 +1,33 @@
 package ExercicioMod11;
 
-import java.util.Scanner;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class ColecoesParte2 {
 
     public static void main(String args[]){
 
-        lerNomeSexo();
+        lerNome();
     }
 
-    public static void lerNomeSexo() {
-        Scanner sc = new Scanner(System.in);
+    public static void lerNome() {
 
-        System.out.println("Nome da 1 pessoa: ");
-        nome = sc.nextLine();
+        List<Individuos> lista = new ArrayList<Individuos>();
 
-        System.out.println("Sexo da 1 pessoa: ");
-        sexo = sc.nextLine();
+        Individuos a = new Individuos("Pedro");
+        Individuos b = new Individuos("Ana");
+        Individuos c = new Individuos("Gabriel");
 
-        System.out.println("Nome da 2 pessoa: ");
-        nome = sc.nextLine();
+        lista.add(a);
+        lista.add(b);
+        lista.add(c);
 
-        System.out.println("Sexo da 2 pessoa: ");
-        sexo = sc.nextLine();
+        System.out.println("Fora da ordem alfabetica:" + lista);
 
-        System.out.println("Nome da 3 pessoa: ");
-        nome = sc.nextLine();
+        Collections.sort(lista);
 
-        System.out.println("Sexo da 3 pessoa: ");
-        sexo = sc.nextLine();
+        System.out.println("Em ordem alfabetica:"+ lista);
     }
 }

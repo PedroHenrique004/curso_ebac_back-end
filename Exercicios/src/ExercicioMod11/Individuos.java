@@ -3,12 +3,14 @@ import java.util.Scanner;
 
 import java.util.Scanner;
 
-public class Individuos {
+public class Individuos implements Comparable <Individuos>  {
 
 
     public String nome;
 
-    public String sexo;
+    public Individuos(String nome){
+        this.nome = nome;
+    }
 
     public String getNome() {
         return nome;
@@ -18,11 +20,13 @@ public class Individuos {
         this.nome = nome;
     }
 
-    public String getSexo() {
-        return sexo;
+    @Override
+    public String toString() {
+        return this.nome;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    @Override
+    public int compareTo(Individuos individuos) {
+        return this.nome.compareTo(individuos.getNome());
     }
 }
