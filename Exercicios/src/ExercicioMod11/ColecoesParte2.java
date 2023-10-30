@@ -2,7 +2,7 @@ package ExercicioMod11;
 
 import java.util.Scanner;
 
-public class MetodosDoexercicio {
+public class ColecoesParte2 {
 
     public static void main(String args[]){
 
