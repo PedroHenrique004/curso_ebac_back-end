@@ -10,10 +10,10 @@ public class ColecoesParte2 {
 
     public static void main(String args[]){
 
-        lerNome();
+        lerNomeSexo();
     }
 
-    public static void lerNome() {
+    public static void lerNomeSexo() {
         Scanner sc = new Scanner(System.in);
 
         List<Individuos> lista = new ArrayList<Individuos>();
@@ -32,12 +32,11 @@ public class ColecoesParte2 {
             System.out.print("Digite o sexo " + (i + 1) + ": ");
             String sexo = sc.nextLine();
 
-            Individuos individuo = new Individuos(nome);
-            lista.add(nome);
+            Individuos individuo = new Individuos(nome, sexo);
+            lista.add(individuo);
 
-            Individuos individuo = new Individuos(sexo);
-            lista.add(sexo);
         }
 
+        System.out.println(lista);
     }
 }
