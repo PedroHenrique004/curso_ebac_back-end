@@ -8,27 +8,20 @@ public class Individuos implements Comparable <Individuos>  {
 
     public String nome;
 
-    public String sexo;
+    public char sexo;
 
-    public Individuos(String nome, String sexo){
+    public Individuos(String nome, char sexo){
         this.nome = nome;
         this.sexo = sexo;
     }
 
-    public String getSexo() {
+    public char getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
     public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+        return nome;
     }
 
     @Override
@@ -37,8 +30,8 @@ public class Individuos implements Comparable <Individuos>  {
     }
 
     @Override
-    public int compareTo(Individuos individuos) {
-        return this.nome.compareTo(individuos.getNome());
+    public int compareTo(Individuos individuo) {
+        return this.nome.compareTo(individuo.getNome());
     }
 
 }
