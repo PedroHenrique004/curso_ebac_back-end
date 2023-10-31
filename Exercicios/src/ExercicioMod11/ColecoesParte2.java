@@ -69,8 +69,19 @@ public class ColecoesParte2 {
             return;
         }
 
-        System.out.println("Pessoas do sexo " + sexoInput + ":");
+        List<Individuos> ordemAlfabetica = new ArrayList<>();
+
         for (Individuos individuo : individuos) {
+            if (individuo.getSexo() == sexo) {
+                ordemAlfabetica.add(individuo);
+            }
+        }
+
+        Collections.sort(ordemAlfabetica);
+
+
+        System.out.println("Pessoas do sexo " + sexoInput + ":");
+        for (Individuos individuo : ordemAlfabetica) {
             if (individuo.getSexo() == sexo) {
                 System.out.println(individuo.getNome());
             }
